@@ -2,6 +2,8 @@
 
 2014 Weizhong Yang (a.k.a zonble)
 
+![](MRTSharp.png)
+
 ## English
 
 I've been not programming on Windows platform for a while. However, recently I learned about that [Microsoft released Visual Stduio Community 2013](http://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/040), a full-fratured IDE for free and I guess it is not bad to give it a try. I downloaded and installed it, then I think I got to write something.

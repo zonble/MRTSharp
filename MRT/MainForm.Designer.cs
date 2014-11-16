@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.fromComboBox = new System.Windows.Forms.ComboBox();
             this.toComboBox = new System.Windows.Forms.ComboBox();
             this.fromLabel = new System.Windows.Forms.Label();
@@ -48,6 +54,7 @@
             this.Transition_Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.openTaipeiMetroWebSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel.SuspendLayout();
@@ -77,6 +84,7 @@
             // fromLabel
             // 
             this.fromLabel.AutoSize = true;
+            this.fromLabel.ForeColor = System.Drawing.Color.White;
             this.fromLabel.Location = new System.Drawing.Point(6, 24);
             this.fromLabel.Name = "fromLabel";
             this.fromLabel.Size = new System.Drawing.Size(46, 20);
@@ -86,6 +94,7 @@
             // toLabel
             // 
             this.toLabel.AutoSize = true;
+            this.toLabel.ForeColor = System.Drawing.Color.White;
             this.toLabel.Location = new System.Drawing.Point(229, 24);
             this.toLabel.Name = "toLabel";
             this.toLabel.Size = new System.Drawing.Size(27, 20);
@@ -115,13 +124,14 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(111, 30);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openTaipeiMetroWebSiteToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
@@ -130,7 +140,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(134, 30);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(308, 30);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -139,6 +149,16 @@
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RouteID,
@@ -152,6 +172,8 @@
             this.dataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            this.dataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView.RowTemplate.Height = 28;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(781, 224);
@@ -184,7 +206,7 @@
             // 
             // panel
             // 
-            this.panel.BackColor = System.Drawing.SystemColors.Window;
+            this.panel.BackColor = System.Drawing.Color.DimGray;
             this.panel.Controls.Add(this.button);
             this.panel.Controls.Add(this.fromComboBox);
             this.panel.Controls.Add(this.toComboBox);
@@ -212,6 +234,18 @@
             this.routesDataGridView.AllowUserToAddRows = false;
             this.routesDataGridView.AllowUserToDeleteRows = false;
             this.routesDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            this.routesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.routesDataGridView.BackgroundColor = System.Drawing.Color.LightGray;
+            this.routesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.routesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.routesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.routesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Station_Count,
@@ -219,9 +253,12 @@
             this.Description});
             this.routesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.routesDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.routesDataGridView.MultiSelect = false;
             this.routesDataGridView.Name = "routesDataGridView";
             this.routesDataGridView.ReadOnly = true;
             this.routesDataGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver;
+            this.routesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.routesDataGridView.RowTemplate.Height = 28;
             this.routesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.routesDataGridView.Size = new System.Drawing.Size(781, 227);
@@ -258,6 +295,7 @@
             this.splitContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer.BackColor = System.Drawing.Color.LightGray;
             this.splitContainer.Location = new System.Drawing.Point(0, 110);
             this.splitContainer.Name = "splitContainer";
             this.splitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -273,17 +311,27 @@
             this.splitContainer.SplitterDistance = 227;
             this.splitContainer.TabIndex = 9;
             // 
+            // openTaipeiMetroWebSiteToolStripMenuItem
+            // 
+            this.openTaipeiMetroWebSiteToolStripMenuItem.Name = "openTaipeiMetroWebSiteToolStripMenuItem";
+            this.openTaipeiMetroWebSiteToolStripMenuItem.Size = new System.Drawing.Size(308, 30);
+            this.openTaipeiMetroWebSiteToolStripMenuItem.Text = "Open Taipei Metro Web Site";
+            this.openTaipeiMetroWebSiteToolStripMenuItem.Click += new System.EventHandler(this.openTaipeiMetroWebSiteToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(781, 564);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "MainForm";
-            this.Text = "MRT Routes";
+            this.Text = "MRT Route Finder";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -321,6 +369,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer;
+        private System.Windows.Forms.ToolStripMenuItem openTaipeiMetroWebSiteToolStripMenuItem;
     }
 }
 

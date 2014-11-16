@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MRTLib;
+using System.Diagnostics;
 
 namespace MRTRoutesApp
 {
@@ -89,6 +90,11 @@ namespace MRTRoutesApp
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("MRT Route Finder\nby Weizhong Yang. A.k.a zonble\nzonble@gmail.com", "About");
+        }
+
+        private void openTaipeiMetroWebSiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.trtc.com.tw/");
         }
     }
 }
